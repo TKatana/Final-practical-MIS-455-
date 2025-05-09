@@ -54,7 +54,7 @@ button:hover {
 }
 
 .country-card {
-  background: white;
+  background: rgb(184, 204, 230);
   border-radius: 8px;
   padding: 20px;
   width: 90%;
@@ -83,16 +83,17 @@ button:hover {
   }
 
   input[type="text"] {
-    width: 90vw;
+    width: 90%;
   }
 
   button {
-    width: 90vw;
+    width: 95%;
     margin-left: 0;
   }
 
   .country-card {
-    width: 95%;
+    background-color: #76afe7;
+    width: 85%;
     font-size: 14px;
   }
 

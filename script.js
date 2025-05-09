@@ -1,12 +1,12 @@
 function searchCountry() {
-  var input = document.getElementById('countryInput').value.trim();
-  var resultDiv = document.getElementById('result');
+  let input = document.getElementById('countryInput').value.trim();
+  let resultDiv = document.getElementById('result');
   resultDiv.innerHTML = ''; // clear previous
   if (!input) {
     resultDiv.innerHTML = '<p style="color:red;">Please enter a country name.</p>';
     return;
   }
-  var url = `https://restcountries.com/v3.1/name/${input}`;
+  let url = `https://restcountries.com/v3.1/name/${input}`;
   fetch(url)
     .then(res => res.json())
     .then(data => displayCountryInfo(data[0]))
@@ -19,9 +19,9 @@ function searchCountry() {
 function displayCountryInfo(country) {
   document.getElementById('countryInput').value = ''; // Clear input field after search
 
-  var resultDiv = document.getElementById('result');
-  var currencies = Object.values(country.currencies || {}).map(c => `${c.name} (${c.symbol})`).join(', ');
-  var card = `
+  let resultDiv = document.getElementById('result');
+  let currencies = Object.values(country.currencies || {}).map(c => `${c.name} (${c.symbol})`).join(', ');
+  let card = `
     <div class="country-card">
       <img src="${country.flags.png}" alt="Flag of ${country.name.common}">
       <h2>${country.name.common}</h2>
